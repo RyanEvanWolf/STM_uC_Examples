@@ -33,7 +33,7 @@
 void Error_Handler(void);
 
 /* USER CODE BEGIN 1 */
-
+#include "lwip/tcp.h"
 /* USER CODE END 1 */
 
 /* Variables Initialization */
@@ -46,6 +46,32 @@ uint8_t NETMASK_ADDRESS[4];
 uint8_t GATEWAY_ADDRESS[4];
 
 /* USER CODE BEGIN 2 */
+
+ip4_addr_t srvAddrs;
+uint16_t srvPort=999;
+struct tcp_pcb * tcp_client;
+
+
+
+
+err_t tcp_connected_callback(void *arg, struct tcp_pcb *tpcb, err_t err)
+{
+	return ERR_OK;
+}
+
+
+
+err_t tcp_rcv_callback(void *arg, struct tcp_pcb *tpcb,
+                             struct pbuf *p, err_t err)
+{
+	HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
+	if(p!=NULL)
+	{
+
+		pbuf_free(p);
+	}
+	return ERR_OK;
+}
 
 /* USER CODE END 2 */
 
@@ -94,6 +120,18 @@ void MX_LWIP_Init(void)
   }
 
 /* USER CODE BEGIN 3 */
+
+  IP4_ADDR(&srvAddrs,192, 168, 1, 1);
+  srvPort=999;
+  tcp_client=tcp_new();
+
+  err_t result;
+
+  result=tcp_connect(tcp_client, &srvAddrs, srvPort, tcp_connected_callback);
+
+  tcp_recv(tcp_client, tcp_rcv_callback);
+
+
 
 /* USER CODE END 3 */
 }

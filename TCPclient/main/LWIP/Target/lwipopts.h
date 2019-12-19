@@ -57,14 +57,14 @@
 #define LWIP_ETHERNET 1
 /*----- Value in opt.h for LWIP_DNS_SECURE: (LWIP_DNS_SECURE_RAND_XID | LWIP_DNS_SECURE_NO_MULTIPLE_OUTSTANDING | LWIP_DNS_SECURE_RAND_SRC_PORT) -*/
 #define LWIP_DNS_SECURE 7
+/*----- Default Value for TCP_WND: 2144 ---*/
+#define TCP_WND 3000
 /*----- Value in opt.h for TCP_SND_QUEUELEN: (4*TCP_SND_BUF + (TCP_MSS - 1))/TCP_MSS -----*/
 #define TCP_SND_QUEUELEN 9
 /*----- Value in opt.h for TCP_SNDLOWAT: LWIP_MIN(LWIP_MAX(((TCP_SND_BUF)/2), (2 * TCP_MSS) + 1), (TCP_SND_BUF) - 1) -*/
 #define TCP_SNDLOWAT 1071
 /*----- Value in opt.h for TCP_SNDQUEUELOWAT: LWIP_MAX(TCP_SND_QUEUELEN)/2, 5) -*/
 #define TCP_SNDQUEUELOWAT 5
-/*----- Value in opt.h for TCP_WND_UPDATE_THRESHOLD: LWIP_MIN(TCP_WND/4, TCP_MSS*4) -----*/
-#define TCP_WND_UPDATE_THRESHOLD 536
 /*----- Value in opt.h for LWIP_NETCONN: 1 -----*/
 #define LWIP_NETCONN 0
 /*----- Value in opt.h for LWIP_SOCKET: 1 -----*/

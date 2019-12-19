@@ -21,8 +21,6 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "lwip.h"
-#include "usart.h"
-#include "usb_otg.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -90,9 +88,6 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_USART3_UART_Init();
-  MX_USB_OTG_FS_PCD_Init();
-  MX_USART2_UART_Init();
   MX_LWIP_Init();
   /* USER CODE BEGIN 2 */
 
@@ -102,6 +97,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  MX_LWIP_Process();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

@@ -1,0 +1,4 @@
+lwip.c:57:7:tcp_connected_callback	24	static
+lwip.c:64:7:tcp_rcv_callback	24	static
+lwip.c:81:6:MX_LWIP_Init	32	static
+lwip.c:157:6:MX_LWIP_Process	8	static
