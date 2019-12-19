@@ -961,3 +961,257 @@ arm-none-eabi-size   main.elf
   64364	    128	  29304	  93796	  16e64	main.elf
 Finished building: default.size.stdout
  
+09:50:20 **** Incremental Build of configuration Debug for project main ****
+make -j4 all 
+arm-none-eabi-gcc "../LWIP/App/lwip.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32F429xx -c -I../Middlewares/Third_Party/LwIP/src/include/lwip/priv -I../Middlewares/Third_Party/LwIP/src/include/netif/ppp -I../Middlewares/Third_Party/LwIP/src/include/posix/sys -I../Middlewares/Third_Party/LwIP/src/include/posix -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/LwIP/src/include/lwip/prot -I../Middlewares/Third_Party/LwIP/src/include/lwip/apps -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/LwIP/system/arch -I../Middlewares/Third_Party/LwIP/src/include -I../LWIP/App -I../Drivers/CMSIS/Include -I../Core/Inc -I../LWIP/Target -I../Middlewares/Third_Party/LwIP/src/include/lwip -I../Middlewares/Third_Party/LwIP/system -I../Middlewares/Third_Party/LwIP/src/include/netif -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"LWIP/App/lwip.d" -MT"LWIP/App/lwip.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "LWIP/App/lwip.o"
+../LWIP/App/lwip.c: In function 'MX_LWIP_Init':
+../LWIP/App/lwip.c:150:21: warning: passing argument 2 of 'udp_recv' from incompatible pointer type [-Wincompatible-pointer-types]
+   udp_recv(debug_if,&handle_udp_recv,NULL);
+                     ^
+In file included from ../LWIP/App/lwip.h:44:0,
+                 from ../LWIP/App/lwip.c:21:
+../Middlewares/Third_Party/LwIP/src/include/lwip/udp.h:123:18: note: expected 'udp_recv_fn {aka void (*)(void *, struct udp_pcb *, struct pbuf *, const struct ip4_addr *, short unsigned int)}' but argument is of type 'void (*)(void *, struct udp_pcb *, struct pbuf *, ip_addr_t *, u16_t) {aka void (*)(void *, struct udp_pcb *, struct pbuf *, struct ip4_addr *, short unsigned int)}'
+ void             udp_recv       (struct udp_pcb *pcb, udp_recv_fn recv,
+                  ^~~~~~~~
+arm-none-eabi-g++ -o "main.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\rwolf\git\NucleoF429ZI\UDPserver\main\main\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="main.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: main.elf
+ 
+arm-none-eabi-objdump -h -S  main.elf  > "main.list"
+arm-none-eabi-size   main.elf 
+   text	   data	    bss	    dec	    hex	filename
+  64320	    128	  29304	  93752	  16e38	main.elf
+Finished building: default.size.stdout
+ 
+Finished building: main.list
+ 
+09:50:59 **** Incremental Build of configuration Debug for project main ****
+make -j4 all 
+arm-none-eabi-size   main.elf 
+   text	   data	    bss	    dec	    hex	filename
+  64320	    128	  29304	  93752	  16e38	main.elf
+Finished building: default.size.stdout
+ 
+09:54:20 **** Incremental Build of configuration Debug for project main ****
+make -j4 all 
+arm-none-eabi-gcc "../LWIP/App/lwip.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32F429xx -c -I../Middlewares/Third_Party/LwIP/src/include/lwip/priv -I../Middlewares/Third_Party/LwIP/src/include/netif/ppp -I../Middlewares/Third_Party/LwIP/src/include/posix/sys -I../Middlewares/Third_Party/LwIP/src/include/posix -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/LwIP/src/include/lwip/prot -I../Middlewares/Third_Party/LwIP/src/include/lwip/apps -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/LwIP/system/arch -I../Middlewares/Third_Party/LwIP/src/include -I../LWIP/App -I../Drivers/CMSIS/Include -I../Core/Inc -I../LWIP/Target -I../Middlewares/Third_Party/LwIP/src/include/lwip -I../Middlewares/Third_Party/LwIP/system -I../Middlewares/Third_Party/LwIP/src/include/netif -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"LWIP/App/lwip.d" -MT"LWIP/App/lwip.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "LWIP/App/lwip.o"
+../LWIP/App/lwip.c: In function 'MX_LWIP_Init':
+../LWIP/App/lwip.c:164:21: warning: passing argument 2 of 'udp_recv' from incompatible pointer type [-Wincompatible-pointer-types]
+   udp_recv(debug_if,&handle_udp_recv,NULL);
+                     ^
+In file included from ../LWIP/App/lwip.h:44:0,
+                 from ../LWIP/App/lwip.c:21:
+../Middlewares/Third_Party/LwIP/src/include/lwip/udp.h:123:18: note: expected 'udp_recv_fn {aka void (*)(void *, struct udp_pcb *, struct pbuf *, const struct ip4_addr *, short unsigned int)}' but argument is of type 'void (*)(void *, struct udp_pcb *, struct pbuf *, ip_addr_t *, u16_t) {aka void (*)(void *, struct udp_pcb *, struct pbuf *, struct ip4_addr *, short unsigned int)}'
+ void             udp_recv       (struct udp_pcb *pcb, udp_recv_fn recv,
+                  ^~~~~~~~
+arm-none-eabi-g++ -o "main.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\rwolf\git\NucleoF429ZI\UDPserver\main\main\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="main.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: main.elf
+ 
+arm-none-eabi-objdump -h -S  main.elf  > "main.list"
+arm-none-eabi-size   main.elf 
+   text	   data	    bss	    dec	    hex	filename
+  64424	    128	  29304	  93856	  16ea0	main.elf
+Finished building: default.size.stdout
+ 
+Finished building: main.list
+ 
+10:01:42 **** Incremental Build of configuration Debug for project main ****
+make -j4 all 
+arm-none-eabi-size   main.elf 
+   text	   data	    bss	    dec	    hex	filename
+  64424	    128	  29304	  93856	  16ea0	main.elf
+Finished building: default.size.stdout
+ 
+10:04:39 **** Incremental Build of configuration Debug for project main ****
+make -j4 all 
+arm-none-eabi-gcc "../LWIP/App/lwip.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32F429xx -c -I../Middlewares/Third_Party/LwIP/src/include/lwip/priv -I../Middlewares/Third_Party/LwIP/src/include/netif/ppp -I../Middlewares/Third_Party/LwIP/src/include/posix/sys -I../Middlewares/Third_Party/LwIP/src/include/posix -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/LwIP/src/include/lwip/prot -I../Middlewares/Third_Party/LwIP/src/include/lwip/apps -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/LwIP/system/arch -I../Middlewares/Third_Party/LwIP/src/include -I../LWIP/App -I../Drivers/CMSIS/Include -I../Core/Inc -I../LWIP/Target -I../Middlewares/Third_Party/LwIP/src/include/lwip -I../Middlewares/Third_Party/LwIP/system -I../Middlewares/Third_Party/LwIP/src/include/netif -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"LWIP/App/lwip.d" -MT"LWIP/App/lwip.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "LWIP/App/lwip.o"
+../LWIP/App/lwip.c: In function 'MX_LWIP_Init':
+../LWIP/App/lwip.c:171:21: warning: passing argument 2 of 'udp_recv' from incompatible pointer type [-Wincompatible-pointer-types]
+   udp_recv(debug_if,&handle_udp_recv,NULL);
+                     ^
+In file included from ../LWIP/App/lwip.h:44:0,
+                 from ../LWIP/App/lwip.c:21:
+../Middlewares/Third_Party/LwIP/src/include/lwip/udp.h:123:18: note: expected 'udp_recv_fn {aka void (*)(void *, struct udp_pcb *, struct pbuf *, const struct ip4_addr *, short unsigned int)}' but argument is of type 'void (*)(void *, struct udp_pcb *, struct pbuf *, ip_addr_t *, u16_t) {aka void (*)(void *, struct udp_pcb *, struct pbuf *, struct ip4_addr *, short unsigned int)}'
+ void             udp_recv       (struct udp_pcb *pcb, udp_recv_fn recv,
+                  ^~~~~~~~
+arm-none-eabi-g++ -o "main.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\rwolf\git\NucleoF429ZI\UDPserver\main\main\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="main.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: main.elf
+ 
+arm-none-eabi-objdump -h -S  main.elf  > "main.list"
+arm-none-eabi-size   main.elf 
+   text	   data	    bss	    dec	    hex	filename
+  64424	    128	  29304	  93856	  16ea0	main.elf
+Finished building: default.size.stdout
+ 
+Finished building: main.list
+ 
+10:04:58 **** Incremental Build of configuration Debug for project main ****
+make -j4 all 
+arm-none-eabi-size   main.elf 
+   text	   data	    bss	    dec	    hex	filename
+  64424	    128	  29304	  93856	  16ea0	main.elf
+Finished building: default.size.stdout
+ 
+10:10:31 **** Incremental Build of configuration Debug for project main ****
+make -j4 all 
+arm-none-eabi-gcc "../LWIP/App/lwip.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32F429xx -c -I../Middlewares/Third_Party/LwIP/src/include/lwip/priv -I../Middlewares/Third_Party/LwIP/src/include/netif/ppp -I../Middlewares/Third_Party/LwIP/src/include/posix/sys -I../Middlewares/Third_Party/LwIP/src/include/posix -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/LwIP/src/include/lwip/prot -I../Middlewares/Third_Party/LwIP/src/include/lwip/apps -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/LwIP/system/arch -I../Middlewares/Third_Party/LwIP/src/include -I../LWIP/App -I../Drivers/CMSIS/Include -I../Core/Inc -I../LWIP/Target -I../Middlewares/Third_Party/LwIP/src/include/lwip -I../Middlewares/Third_Party/LwIP/system -I../Middlewares/Third_Party/LwIP/src/include/netif -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"LWIP/App/lwip.d" -MT"LWIP/App/lwip.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "LWIP/App/lwip.o"
+../LWIP/App/lwip.c: In function 'MX_LWIP_Init':
+../LWIP/App/lwip.c:138:21: warning: passing argument 2 of 'udp_recv' from incompatible pointer type [-Wincompatible-pointer-types]
+   udp_recv(debug_if,&handle_udp_recv,NULL);
+                     ^
+In file included from ../LWIP/App/lwip.h:44:0,
+                 from ../LWIP/App/lwip.c:21:
+../Middlewares/Third_Party/LwIP/src/include/lwip/udp.h:123:18: note: expected 'udp_recv_fn {aka void (*)(void *, struct udp_pcb *, struct pbuf *, const struct ip4_addr *, short unsigned int)}' but argument is of type 'void (*)(void *, struct udp_pcb *, struct pbuf *, ip_addr_t *, u16_t) {aka void (*)(void *, struct udp_pcb *, struct pbuf *, struct ip4_addr *, short unsigned int)}'
+ void             udp_recv       (struct udp_pcb *pcb, udp_recv_fn recv,
+                  ^~~~~~~~
+arm-none-eabi-g++ -o "main.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\rwolf\git\NucleoF429ZI\UDPserver\main\main\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="main.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: main.elf
+ 
+arm-none-eabi-objdump -h -S  main.elf  > "main.list"
+arm-none-eabi-size   main.elf 
+   text	   data	    bss	    dec	    hex	filename
+  64364	    128	  29304	  93796	  16e64	main.elf
+Finished building: default.size.stdout
+ 
+Finished building: main.list
+ 
+10:10:53 **** Incremental Build of configuration Debug for project main ****
+make -j4 all 
+arm-none-eabi-size   main.elf 
+   text	   data	    bss	    dec	    hex	filename
+  64364	    128	  29304	  93796	  16e64	main.elf
+Finished building: default.size.stdout
+ 
+10:13:05 **** Incremental Build of configuration Debug for project main ****
+make -j4 all 
+arm-none-eabi-gcc "../LWIP/App/lwip.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32F429xx -c -I../Middlewares/Third_Party/LwIP/src/include/lwip/priv -I../Middlewares/Third_Party/LwIP/src/include/netif/ppp -I../Middlewares/Third_Party/LwIP/src/include/posix/sys -I../Middlewares/Third_Party/LwIP/src/include/posix -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/LwIP/src/include/lwip/prot -I../Middlewares/Third_Party/LwIP/src/include/lwip/apps -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/LwIP/system/arch -I../Middlewares/Third_Party/LwIP/src/include -I../LWIP/App -I../Drivers/CMSIS/Include -I../Core/Inc -I../LWIP/Target -I../Middlewares/Third_Party/LwIP/src/include/lwip -I../Middlewares/Third_Party/LwIP/system -I../Middlewares/Third_Party/LwIP/src/include/netif -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"LWIP/App/lwip.d" -MT"LWIP/App/lwip.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "LWIP/App/lwip.o"
+../LWIP/App/lwip.c: In function 'MX_LWIP_Init':
+../LWIP/App/lwip.c:138:21: warning: passing argument 2 of 'udp_recv' from incompatible pointer type [-Wincompatible-pointer-types]
+   udp_recv(debug_if,&handle_udp_recv,NULL);
+                     ^
+In file included from ../LWIP/App/lwip.h:44:0,
+                 from ../LWIP/App/lwip.c:21:
+../Middlewares/Third_Party/LwIP/src/include/lwip/udp.h:123:18: note: expected 'udp_recv_fn {aka void (*)(void *, struct udp_pcb *, struct pbuf *, const struct ip4_addr *, short unsigned int)}' but argument is of type 'void (*)(void *, struct udp_pcb *, struct pbuf *, ip_addr_t *, u16_t) {aka void (*)(void *, struct udp_pcb *, struct pbuf *, struct ip4_addr *, short unsigned int)}'
+ void             udp_recv       (struct udp_pcb *pcb, udp_recv_fn recv,
+                  ^~~~~~~~
+arm-none-eabi-g++ -o "main.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\rwolf\git\NucleoF429ZI\UDPserver\main\main\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="main.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: main.elf
+ 
+arm-none-eabi-objdump -h -S  main.elf  > "main.list"
+arm-none-eabi-size   main.elf 
+   text	   data	    bss	    dec	    hex	filename
+  64380	    128	  29304	  93812	  16e74	main.elf
+Finished building: default.size.stdout
+ 
+Finished building: main.list
+ 
+10:13:18 **** Incremental Build of configuration Debug for project main ****
+make -j4 all 
+arm-none-eabi-size   main.elf 
+   text	   data	    bss	    dec	    hex	filename
+  64380	    128	  29304	  93812	  16e74	main.elf
+Finished building: default.size.stdout
+ 
+10:17:00 **** Incremental Build of configuration Debug for project main ****
+make -j4 all 
+arm-none-eabi-gcc "../LWIP/App/lwip.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32F429xx -c -I../Middlewares/Third_Party/LwIP/src/include/lwip/priv -I../Middlewares/Third_Party/LwIP/src/include/netif/ppp -I../Middlewares/Third_Party/LwIP/src/include/posix/sys -I../Middlewares/Third_Party/LwIP/src/include/posix -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/LwIP/src/include/lwip/prot -I../Middlewares/Third_Party/LwIP/src/include/lwip/apps -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/LwIP/system/arch -I../Middlewares/Third_Party/LwIP/src/include -I../LWIP/App -I../Drivers/CMSIS/Include -I../Core/Inc -I../LWIP/Target -I../Middlewares/Third_Party/LwIP/src/include/lwip -I../Middlewares/Third_Party/LwIP/system -I../Middlewares/Third_Party/LwIP/src/include/netif -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"LWIP/App/lwip.d" -MT"LWIP/App/lwip.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "LWIP/App/lwip.o"
+../LWIP/App/lwip.c: In function 'MX_LWIP_Init':
+../LWIP/App/lwip.c:138:21: warning: passing argument 2 of 'udp_recv' from incompatible pointer type [-Wincompatible-pointer-types]
+   udp_recv(debug_if,&handle_udp_recv,NULL);
+                     ^
+In file included from ../LWIP/App/lwip.h:44:0,
+                 from ../LWIP/App/lwip.c:21:
+../Middlewares/Third_Party/LwIP/src/include/lwip/udp.h:123:18: note: expected 'udp_recv_fn {aka void (*)(void *, struct udp_pcb *, struct pbuf *, const struct ip4_addr *, short unsigned int)}' but argument is of type 'void (*)(void *, struct udp_pcb *, struct pbuf *, ip_addr_t *, u16_t) {aka void (*)(void *, struct udp_pcb *, struct pbuf *, struct ip4_addr *, short unsigned int)}'
+ void             udp_recv       (struct udp_pcb *pcb, udp_recv_fn recv,
+                  ^~~~~~~~
+arm-none-eabi-g++ -o "main.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\rwolf\git\NucleoF429ZI\UDPserver\main\main\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="main.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: main.elf
+ 
+arm-none-eabi-objdump -h -S  main.elf  > "main.list"
+arm-none-eabi-size   main.elf 
+   text	   data	    bss	    dec	    hex	filename
+  64388	    144	  29304	  93836	  16e8c	main.elf
+Finished building: default.size.stdout
+ 
+Finished building: main.list
+ 
+10:17:22 **** Incremental Build of configuration Debug for project main ****
+make -j4 all 
+arm-none-eabi-size   main.elf 
+   text	   data	    bss	    dec	    hex	filename
+  64388	    144	  29304	  93836	  16e8c	main.elf
+Finished building: default.size.stdout
+ 
+10:19:36 **** Incremental Build of configuration Debug for project main ****
+make -j4 all 
+arm-none-eabi-gcc "../LWIP/App/lwip.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32F429xx -c -I../Middlewares/Third_Party/LwIP/src/include/lwip/priv -I../Middlewares/Third_Party/LwIP/src/include/netif/ppp -I../Middlewares/Third_Party/LwIP/src/include/posix/sys -I../Middlewares/Third_Party/LwIP/src/include/posix -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/LwIP/src/include/lwip/prot -I../Middlewares/Third_Party/LwIP/src/include/lwip/apps -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/LwIP/system/arch -I../Middlewares/Third_Party/LwIP/src/include -I../LWIP/App -I../Drivers/CMSIS/Include -I../Core/Inc -I../LWIP/Target -I../Middlewares/Third_Party/LwIP/src/include/lwip -I../Middlewares/Third_Party/LwIP/system -I../Middlewares/Third_Party/LwIP/src/include/netif -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"LWIP/App/lwip.d" -MT"LWIP/App/lwip.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "LWIP/App/lwip.o"
+../LWIP/App/lwip.c: In function 'MX_LWIP_Init':
+../LWIP/App/lwip.c:139:21: warning: passing argument 2 of 'udp_recv' from incompatible pointer type [-Wincompatible-pointer-types]
+   udp_recv(debug_if,&handle_udp_recv,NULL);
+                     ^
+In file included from ../LWIP/App/lwip.h:44:0,
+                 from ../LWIP/App/lwip.c:21:
+../Middlewares/Third_Party/LwIP/src/include/lwip/udp.h:123:18: note: expected 'udp_recv_fn {aka void (*)(void *, struct udp_pcb *, struct pbuf *, const struct ip4_addr *, short unsigned int)}' but argument is of type 'void (*)(void *, struct udp_pcb *, struct pbuf *, ip_addr_t *, u16_t) {aka void (*)(void *, struct udp_pcb *, struct pbuf *, struct ip4_addr *, short unsigned int)}'
+ void             udp_recv       (struct udp_pcb *pcb, udp_recv_fn recv,
+                  ^~~~~~~~
+arm-none-eabi-g++ -o "main.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\rwolf\git\NucleoF429ZI\UDPserver\main\main\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="main.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: main.elf
+ 
+arm-none-eabi-objdump -h -S  main.elf  > "main.list"
+arm-none-eabi-size   main.elf 
+   text	   data	    bss	    dec	    hex	filename
+  64400	    144	  29304	  93848	  16e98	main.elf
+Finished building: default.size.stdout
+ 
+Finished building: main.list
+ 
+10:20:12 **** Incremental Build of configuration Debug for project main ****
+make -j4 all 
+arm-none-eabi-size   main.elf 
+   text	   data	    bss	    dec	    hex	filename
+  64400	    144	  29304	  93848	  16e98	main.elf
+Finished building: default.size.stdout
+ 
+10:31:55 **** Incremental Build of configuration Debug for project main ****
+make -j4 all 
+arm-none-eabi-gcc "../LWIP/App/lwip.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32F429xx -c -I../Middlewares/Third_Party/LwIP/src/include/lwip/priv -I../Middlewares/Third_Party/LwIP/src/include/netif/ppp -I../Middlewares/Third_Party/LwIP/src/include/posix/sys -I../Middlewares/Third_Party/LwIP/src/include/posix -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/LwIP/src/include/lwip/prot -I../Middlewares/Third_Party/LwIP/src/include/lwip/apps -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/LwIP/system/arch -I../Middlewares/Third_Party/LwIP/src/include -I../LWIP/App -I../Drivers/CMSIS/Include -I../Core/Inc -I../LWIP/Target -I../Middlewares/Third_Party/LwIP/src/include/lwip -I../Middlewares/Third_Party/LwIP/system -I../Middlewares/Third_Party/LwIP/src/include/netif -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"LWIP/App/lwip.d" -MT"LWIP/App/lwip.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "LWIP/App/lwip.o"
+../LWIP/App/lwip.c: In function 'MX_LWIP_Init':
+../LWIP/App/lwip.c:148:21: warning: passing argument 2 of 'udp_recv' from incompatible pointer type [-Wincompatible-pointer-types]
+   udp_recv(debug_if,&handle_udp_recv,NULL);
+                     ^
+In file included from ../LWIP/App/lwip.h:44:0,
+                 from ../LWIP/App/lwip.c:21:
+../Middlewares/Third_Party/LwIP/src/include/lwip/udp.h:123:18: note: expected 'udp_recv_fn {aka void (*)(void *, struct udp_pcb *, struct pbuf *, const struct ip4_addr *, short unsigned int)}' but argument is of type 'void (*)(void *, struct udp_pcb *, struct pbuf *, ip_addr_t *, u16_t) {aka void (*)(void *, struct udp_pcb *, struct pbuf *, struct ip4_addr *, short unsigned int)}'
+ void             udp_recv       (struct udp_pcb *pcb, udp_recv_fn recv,
+                  ^~~~~~~~
+arm-none-eabi-g++ -o "main.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\rwolf\git\NucleoF429ZI\UDPserver\main\main\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="main.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: main.elf
+ 
+arm-none-eabi-objdump -h -S  main.elf  > "main.list"
+arm-none-eabi-size   main.elf 
+   text	   data	    bss	    dec	    hex	filename
+  64368	    144	  29296	  93808	  16e70	main.elf
+Finished building: default.size.stdout
+ 
+Finished building: main.list
+ 
+10:42:37 **** Incremental Build of configuration Debug for project main ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32F429xx -c -I../Middlewares/Third_Party/LwIP/src/include/lwip/priv -I../Middlewares/Third_Party/LwIP/src/include/netif/ppp -I../Middlewares/Third_Party/LwIP/src/include/posix/sys -I../Middlewares/Third_Party/LwIP/src/include/posix -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/LwIP/src/include/lwip/prot -I../Middlewares/Third_Party/LwIP/src/include/lwip/apps -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/LwIP/system/arch -I../Middlewares/Third_Party/LwIP/src/include -I../LWIP/App -I../Drivers/CMSIS/Include -I../Core/Inc -I../LWIP/Target -I../Middlewares/Third_Party/LwIP/src/include/lwip -I../Middlewares/Third_Party/LwIP/system -I../Middlewares/Third_Party/LwIP/src/include/netif -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "main.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\rwolf\git\NucleoF429ZI\UDPserver\main\main\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="main.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: main.elf
+ 
+arm-none-eabi-objdump -h -S  main.elf  > "main.list"
+arm-none-eabi-size   main.elf 
+   text	   data	    bss	    dec	    hex	filename
+  64368	    144	  29296	  93808	  16e70	main.elf
+Finished building: default.size.stdout
+ 
+Finished building: main.list
+ 
+10:42:54 **** Incremental Build of configuration Debug for project main ****
+make -j4 all 
+arm-none-eabi-size   main.elf 
+   text	   data	    bss	    dec	    hex	filename
+  64368	    144	  29296	  93808	  16e70	main.elf
+Finished building: default.size.stdout
+ 

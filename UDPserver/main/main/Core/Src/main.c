@@ -15,6 +15,20 @@
   *                        opensource.org/licenses/BSD-3-Clause
   *
   ******************************************************************************
+
+  Description:
+  A basic UDP debug interface framework that needed to work as follows.
+
+  Client sends a UDP packet to the STM UDP server.
+ At the moment the stm IP is statically assigned with an arbitrary port.
+
+ As soon as this happens, the STM begins streaming a fixed size message back to the client.
+ This message could contain actual debug information about the device, and the client PC can
+ then format and display this in a GUI of some kind.
+ At the moment we can only start a stream, but some kind of protocol could be defined between
+ the client and STM to start/stop streams, perform certain actions,
+ or adjust the information being streamed out.
+
   */
 /* USER CODE END Header */
 

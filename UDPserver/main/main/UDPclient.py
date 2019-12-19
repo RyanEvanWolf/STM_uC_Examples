@@ -24,6 +24,11 @@ UDPClientSocket.sendto(bytesToSend, serverAddressPort)
 
  
 while(True):
-    msgFromServer = UDPClientSocket.recvfrom(bufferSize)
-    msg = "Message from Server {}".format(msgFromServer[0])
-    print(msg)
+    try:
+        UDPClientSocket.settimeout(1.0)
+        msgFromServer = UDPClientSocket.recv(15)
+        UDPClientSocket.settimeout(None)
+        msg = "Message from Server {}".format(msgFromServer[0])
+        print(msg)
+    except Exception as e:
+        print(e)
