@@ -25,12 +25,13 @@ class TCPserver:
             self.scr.clear()
         except Exception as e:
             self.scr.addstr(4,0,str(e))
-        delayTime=1.0#seconds
+        delayTime=0.02#seconds
         msg="this is a very long message"
         while(True):
-           connection.send(msg.encode('utf-8'))
-           self.scr.addstr(2,0,str(time.time()))
-           time.sleep(delayTime)
+            connection.send((msg*23).encode('utf-8'))
+            self.scr.addstr(3,0,"ByteSize:"+str(len(msg*23)))
+            self.scr.addstr(2,0,str(time.time()))
+            time.sleep(delayTime)
 
 
 class TerminalStateMachine:

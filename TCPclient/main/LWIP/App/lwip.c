@@ -61,7 +61,7 @@ err_t tcp_rcv_callback(void *arg, struct tcp_pcb *tpcb,
 	HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
 	if(p!=NULL)
 	{
-
+		tcp_recved(tpcb,p->tot_len);
 		pbuf_free(p);
 	}
 	return ERR_OK;
@@ -119,7 +119,7 @@ void MX_LWIP_Init(void)
     tcp_client=tcp_new();
 
     err_t result;
-
+    tcp_nagle_disable(tcp_client);
     tcp_connect(tcp_client, &srvAddrs, srvPort, tcp_connected_callback);
 
     tcp_recv(tcp_client, tcp_rcv_callback);
