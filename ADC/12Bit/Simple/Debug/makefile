@@ -55,8 +55,8 @@ Simple.bin \
 all: Simple.elf secondary-outputs
 
 # Tool invocations
-Simple.elf: $(OBJS) $(USER_OBJS) D:\Shared\NucleoF429ZI\ADC\12Bit\Simple\STM32F429ZITX_FLASH.ld
-	arm-none-eabi-g++ -o "Simple.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\Shared\NucleoF429ZI\ADC\12Bit\Simple\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Simple.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Simple.elf: $(OBJS) $(USER_OBJS) C:\Users\rwolf\git\NucleoF429ZI\ADC\12Bit\Simple\STM32F429ZITX_FLASH.ld
+	arm-none-eabi-g++ -o "Simple.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\rwolf\git\NucleoF429ZI\ADC\12Bit\Simple\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Simple.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
