@@ -682,3 +682,389 @@ java.lang.RuntimeException
 	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+!SESSION 2020-03-21 19:53:43.973 -----------------------------------------------
+eclipse.buildId=Version 1.3.0
+java.version=1.8.0_202
+java.vendor=AdoptOpenJdk
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_ZA
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\rwolf\git\NucleoF429ZI\UDPserver\main
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2020-03-21 19:53:49.461
+!MESSAGE Log4j initialized with config file C:\Users\rwolf\git\NucleoF429ZI\UDPserver\main\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2020-03-21 19:53:55.948
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2020-03-21 19:53:56.793
+!MESSAGE com.st.stm32cube.ide.mcu.ide/META-INF/version/build_ref file not found, build reference will not be reported into properties
+
+!ENTRY org.eclipse.core.resources 4 568 2020-03-21 19:58:55.695
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\rwolf\git\NucleoF429ZI\UDPserver\main\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:48)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:44)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1767)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1848)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1202)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1143)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jface 2 0 2020-03-21 20:08:11.555
+!MESSAGE Ignored reentrant call while viewer is busy. This is only logged once per viewer instance, but similar calls will still be ignored.
+!STACK 0
+java.lang.RuntimeException
+	at org.eclipse.jface.viewers.ColumnViewer.checkBusy(ColumnViewer.java:764)
+	at org.eclipse.jface.viewers.ColumnViewer.update(ColumnViewer.java:543)
+	at org.eclipse.ui.navigator.CommonViewer.update(CommonViewer.java:512)
+	at org.eclipse.jface.viewers.StructuredViewer.update(StructuredViewer.java:1965)
+	at org.eclipse.ui.internal.navigator.resources.nested.NestedProjectsLabelProvider.lambda$2(NestedProjectsLabelProvider.java:87)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:656)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:632)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:474)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1595)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1582)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+
+!ENTRY org.eclipse.core.resources 4 568 2020-03-21 20:13:13.568
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\rwolf\git\NucleoF429ZI\UDPserver\main\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:48)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:44)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1767)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1848)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1202)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1143)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2020-03-21 21:17:45.760 -----------------------------------------------
+eclipse.buildId=Version 1.3.0
+java.version=1.8.0_202
+java.vendor=AdoptOpenJdk
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_ZA
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-03-21 21:17:55.836
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2020-03-21 21:18:00.347
+!MESSAGE Log4j initialized with config file C:\Users\rwolf\git\NucleoF429ZI\UDPserver\main\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2020-03-21 21:18:05.555
+!MESSAGE Started RMI Server, listening on port 41338
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2020-03-21 21:18:06.577
+!MESSAGE com.st.stm32cube.ide.mcu.ide/META-INF/version/build_ref file not found, build reference will not be reported into properties
+
+!ENTRY org.eclipse.core.resources 4 568 2020-03-21 21:23:04.115
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\rwolf\git\NucleoF429ZI\UDPserver\main\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:48)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:44)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1767)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1848)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1202)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1143)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.ui.ide 4 4 2020-03-21 21:37:32.257
+!MESSAGE Problems saving workspace
+
+!ENTRY org.eclipse.ui.ide 4 1 2020-03-21 21:37:32.272
+!MESSAGE Problems occurred while trying to save the state of the workbench.
+!SUBENTRY 1 org.eclipse.core.resources 4 568 2020-03-21 21:37:32.272
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\rwolf\git\NucleoF429ZI\UDPserver\main\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.eclipse.core.internal.localstore.SafeFileOutputStream.<init>(SafeFileOutputStream.java:55)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSave(SaveManager.java:1659)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSave(SaveManager.java:1738)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1177)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2338)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.lambda$1(IDEWorkbenchAdvisor.java:509)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+!SESSION 2020-03-22 11:33:28.671 -----------------------------------------------
+eclipse.buildId=Version 1.3.0
+java.version=1.8.0_202
+java.vendor=AdoptOpenJdk
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_ZA
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2020-03-22 11:33:45.795
+!MESSAGE Log4j initialized with config file C:\Users\rwolf\git\NucleoF429ZI\UDPserver\main\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2020-03-22 11:33:55.135
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2020-03-22 11:33:56.019
+!MESSAGE com.st.stm32cube.ide.mcu.ide/META-INF/version/build_ref file not found, build reference will not be reported into properties
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2020-03-22 11:34:33.569
+!MESSAGE No repository found at https://download.eclipse.org/releases/2019-09.
+
+!ENTRY org.eclipse.core.resources 4 568 2020-03-22 12:07:52.990
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\rwolf\git\NucleoF429ZI\UDPserver\main\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:48)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:44)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1767)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1848)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1202)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1143)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 4 568 2020-03-22 12:19:51.910
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\rwolf\git\NucleoF429ZI\UDPserver\main\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:48)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:44)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1767)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1848)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1202)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1143)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 4 568 2020-03-22 12:38:50.131
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\rwolf\git\NucleoF429ZI\UDPserver\main\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:48)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:44)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1767)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1848)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1202)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1143)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jface 2 0 2020-03-22 12:41:11.142
+!MESSAGE Ignored reentrant call while viewer is busy. This is only logged once per viewer instance, but similar calls will still be ignored.
+!STACK 0
+java.lang.RuntimeException
+	at org.eclipse.jface.viewers.ColumnViewer.checkBusy(ColumnViewer.java:764)
+	at org.eclipse.jface.viewers.ColumnViewer.update(ColumnViewer.java:543)
+	at org.eclipse.ui.navigator.CommonViewer.update(CommonViewer.java:512)
+	at org.eclipse.jface.viewers.StructuredViewer.update(StructuredViewer.java:1965)
+	at org.eclipse.ui.internal.navigator.resources.nested.NestedProjectsLabelProvider.lambda$2(NestedProjectsLabelProvider.java:87)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:656)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:632)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:474)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1595)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1582)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+
+!ENTRY org.eclipse.ui 4 4 2020-03-22 12:44:15.870
+!MESSAGE Conflicting handlers for org.eclipse.ui.navigate.backwardHistory: {ActionHandler(org.eclipse.ui.internal.NavigationHistoryAction@60b616c8)} vs {ActionHandler(org.eclipse.ui.internal.dialogs.PreferencePageHistory$1@6384c81e)} in: PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.cdt.ui.editor.CEditor active activeOnClose (main.c) Context
+!STACK 0
+java.lang.IllegalStateException: Conflicting handlers: {[ActionHandler(org.eclipse.ui.internal.NavigationHistoryAction@60b616c8),  for 'org.eclipse.ui.navigate.backwardHistory',  in TrimmedWindowImpl (IDEWindow) Context, activeWhen=AndExpression [children=[ActiveShellExpression(Shell {main - main/Core/Src/main.c - STM32CubeIDE}), WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@5c3d4f05)]], active=true, sourcePriority=17408, participating=true]} vs {[ActionHandler(org.eclipse.ui.internal.dialogs.PreferencePageHistory$1@6384c81e),  for 'org.eclipse.ui.navigate.backwardHistory',  in WorkbenchContext, activeWhen=ActiveShellExpression(Shell {Properties for main}), active=true, sourcePriority=17408, participating=true]} in: PartImpl (org.eclipse.e4.ui.compatibility.editor)  removeOnHide org.eclipse.cdt.ui.editor.CEditor active activeOnClose (main.c) Context
+	at org.eclipse.ui.internal.handlers.LegacyHandlerService$HandlerSelectionFunction.compute(LegacyHandlerService.java:145)
+	at org.eclipse.e4.core.internal.contexts.ValueComputation.get(ValueComputation.java:66)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.internalGet(EclipseContext.java:250)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.get(EclipseContext.java:237)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.lookUpHandler(HandlerServiceImpl.java:103)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.handlerChanged(E4HandlerProxy.java:112)
+	at org.eclipse.core.commands.AbstractHandler.fireHandlerChanged(AbstractHandler.java:77)
+	at org.eclipse.jface.commands.ActionHandler.lambda$0(ActionHandler.java:81)
+	at org.eclipse.jface.action.AbstractAction.firePropertyChange(AbstractAction.java:52)
+	at org.eclipse.jface.action.AbstractAction.firePropertyChange(AbstractAction.java:75)
+	at org.eclipse.jface.action.Action.setToolTipText(Action.java:635)
+	at org.eclipse.ui.internal.dialogs.PreferencePageHistory$1.isEnabled(PreferencePageHistory.java:230)
+	at org.eclipse.jface.action.ActionContributionItem.update(ActionContributionItem.java:813)
+	at org.eclipse.ui.internal.dialogs.PreferencePageHistory.updateHistoryControls(PreferencePageHistory.java:137)
+	at org.eclipse.ui.internal.dialogs.PreferencePageHistory.addHistoryEntry(PreferencePageHistory.java:112)
+	at org.eclipse.ui.internal.dialogs.FilteredPreferenceDialog.showPage(FilteredPreferenceDialog.java:632)
+	at org.eclipse.jface.preference.PreferenceDialog$5.lambda$0(PreferenceDialog.java:661)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:72)
+	at org.eclipse.jface.preference.PreferenceDialog$5.selectionChanged(PreferenceDialog.java:658)
+	at org.eclipse.jface.viewers.StructuredViewer$3.run(StructuredViewer.java:818)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.JFaceUtil.lambda$0(JFaceUtil.java:47)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.viewers.StructuredViewer.firePostSelectionChanged(StructuredViewer.java:815)
+	at org.eclipse.jface.viewers.StructuredViewer.handlePostSelect(StructuredViewer.java:1185)
+	at org.eclipse.jface.viewers.StructuredViewer.lambda$0(StructuredViewer.java:1208)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:84)
+	at org.eclipse.jface.util.OpenStrategy.firePostSelectionEvent(OpenStrategy.java:263)
+	at org.eclipse.jface.util.OpenStrategy.access$5(OpenStrategy.java:258)
+	at org.eclipse.jface.util.OpenStrategy$1.lambda$1(OpenStrategy.java:428)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3961)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3588)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.run(PropertyDialogAction.java:153)
+	at org.eclipse.ui.internal.ide.actions.ProjectPropertyDialogAction.run(ProjectPropertyDialogAction.java:81)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:580)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:412)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4173)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1057)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3986)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3585)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:633)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
+
+!ENTRY org.eclipse.core.resources 4 568 2020-03-22 12:45:56.833
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\rwolf\git\NucleoF429ZI\UDPserver\main\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:48)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:44)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1767)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1848)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1202)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1143)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 4 568 2020-03-22 12:55:02.559
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\rwolf\git\NucleoF429ZI\UDPserver\main\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:48)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:44)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1767)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1848)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1202)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1143)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 4 568 2020-03-22 13:00:15.371
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\rwolf\git\NucleoF429ZI\UDPserver\main\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:48)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:44)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1767)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1848)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1202)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1143)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 4 568 2020-03-22 13:06:18.784
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\rwolf\git\NucleoF429ZI\UDPserver\main\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:48)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:44)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1767)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1848)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1202)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1143)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 4 568 2020-03-22 13:12:07.249
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\rwolf\git\NucleoF429ZI\UDPserver\main\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:48)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:44)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1767)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1848)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1202)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1143)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 4 568 2020-03-22 13:17:21.571
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\rwolf\git\NucleoF429ZI\UDPserver\main\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:48)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:44)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1767)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1848)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1202)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1143)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)

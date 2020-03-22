@@ -35,6 +35,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "lwip.h"
+#include "tim.h"
 #include "usart.h"
 #include "usb_otg.h"
 #include "gpio.h"
@@ -72,7 +73,20 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+//int fputc(int c, FILE * stream)
+//{
+//	HAL_UART_Transmit(&huart2, (uint8_t *)(&c), 1, 500);
+//	return c; //return the character written to denote a successfull write
+//}
 
+void __io_putchar(uint8_t ch)
+{
+/* Place your implementation of fputc here */
+/* e.g. write a character to the USART */
+HAL_UART_Transmit(&huart2,(uint8_t*)&ch,1,1); // 1 tick waiting (1ms) enough for 87us/byte at 115200
+
+//return ch;
+}
 /* USER CODE END 0 */
 
 /**
@@ -107,15 +121,18 @@ int main(void)
   MX_USART3_UART_Init();
   MX_USB_OTG_FS_PCD_Init();
   MX_LWIP_Init();
+  MX_TIM4_Init();
+  MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin,RESET);
+  HAL_TIM_OC_Start_IT(&htim4,TIM_CHANNEL_2);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  MX_LWIP_Process();
+	 MX_LWIP_Process();
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

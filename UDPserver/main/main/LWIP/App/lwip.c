@@ -6,7 +6,7 @@
   ******************************************************************************
   * @attention
   *
-  * <h2><center>&copy; Copyright (c) 2019 STMicroelectronics.
+  * <h2><center>&copy; Copyright (c) 2020 STMicroelectronics.
   * All rights reserved.</center></h2>
   *
   * This software component is licensed by ST under Ultimate Liberty license
@@ -179,7 +179,6 @@ void MX_LWIP_Process(void)
 
   if(debugEnabled)
   {
-	  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin,SET);
 	  transmit();
   }
 

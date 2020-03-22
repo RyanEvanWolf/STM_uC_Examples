@@ -1,0 +1,4 @@
+lwip.c:60:6:handle_udp_recv	24	static
+lwip.c:83:6:transmit	16	static
+lwip.c:97:6:MX_LWIP_Init	24	static
+lwip.c:158:6:MX_LWIP_Process	8	static
