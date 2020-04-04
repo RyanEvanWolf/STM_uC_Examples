@@ -58,15 +58,14 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Middlewares/Third_Party/LwIP/src/include/lwip/prot/etharp.h \
  ../Middlewares/Third_Party/LwIP/src/include/netif/ethernet.h \
  ../Middlewares/Third_Party/LwIP/src/include/lwip/dhcp.h \
- ../Middlewares/Third_Party/LwIP/src/include/lwip/timeouts.h \
- ../LWIP/Target/ethernetif.h \
  ../Middlewares/Third_Party/LwIP/src/include/lwip/udp.h \
  ../Middlewares/Third_Party/LwIP/src/include/lwip/ip.h \
  ../Middlewares/Third_Party/LwIP/src/include/lwip/ip6.h \
  ../Middlewares/Third_Party/LwIP/src/include/lwip/prot/ip.h \
  ../Middlewares/Third_Party/LwIP/src/include/lwip/prot/udp.h \
- ../Core/Inc/tim.h ../Core/Inc/main.h ../Core/Inc/usart.h \
- ../Core/Inc/gpio.h
+ ../Middlewares/Third_Party/LwIP/src/include/lwip/timeouts.h \
+ ../LWIP/Target/ethernetif.h ../Core/Inc/tim.h ../Core/Inc/main.h \
+ ../Core/Inc/usart.h ../Core/Inc/gpio.h
 
 ../Core/Inc/main.h:
 
@@ -188,10 +187,6 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 
 ../Middlewares/Third_Party/LwIP/src/include/lwip/dhcp.h:
 
-../Middlewares/Third_Party/LwIP/src/include/lwip/timeouts.h:
-
-../LWIP/Target/ethernetif.h:
-
 ../Middlewares/Third_Party/LwIP/src/include/lwip/udp.h:
 
 ../Middlewares/Third_Party/LwIP/src/include/lwip/ip.h:
@@ -201,6 +196,10 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Middlewares/Third_Party/LwIP/src/include/lwip/prot/ip.h:
 
 ../Middlewares/Third_Party/LwIP/src/include/lwip/prot/udp.h:
+
+../Middlewares/Third_Party/LwIP/src/include/lwip/timeouts.h:
+
+../LWIP/Target/ethernetif.h:
 
 ../Core/Inc/tim.h:
 

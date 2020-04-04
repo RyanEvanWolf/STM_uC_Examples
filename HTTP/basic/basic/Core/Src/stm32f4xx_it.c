@@ -21,10 +21,9 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "stm32f4xx_it.h"
-#include "lwip/debug.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "lwip/debug.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/

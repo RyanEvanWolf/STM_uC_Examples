@@ -107,21 +107,29 @@ int main(void)
   MX_LWIP_Init();
   MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
+
+  for(int index=0;index<5;index++)
+  {
+	  HAL_GPIO_WritePin(uC_DEBUG_LED_GPIO_Port, uC_DEBUG_LED_Pin, GPIO_PIN_SET);
+	  HAL_Delay(50);
+	  HAL_GPIO_WritePin(uC_DEBUG_LED_GPIO_Port, uC_DEBUG_LED_Pin, GPIO_PIN_RESET);
+	  HAL_Delay(50);
+  }
+
   HAL_TIM_OC_Start_IT(&htim4,TIM_CHANNEL_2);
-  //HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin,RESET);
+
+  HAL_GPIO_WritePin(uC_DEBUG_LED_GPIO_Port, uC_DEBUG_LED_Pin, GPIO_PIN_SET);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  //MX_LWIP_Process();
+	  MX_LWIP_Process();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  LWIP_DEBUGF(LWIP_DBG_TRACE,("DEBUGLOOP\n"));
-	  HAL_GPIO_TogglePin(uC_DEBUG_LED_GPIO_Port,uC_DEBUG_LED_Pin);
-	  HAL_Delay(1500);
   }
   /* USER CODE END 3 */
 }
