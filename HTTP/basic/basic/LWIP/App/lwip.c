@@ -26,6 +26,8 @@
 #endif /* MDK ARM Compiler */
 
 /* USER CODE BEGIN 0 */
+#include "usart.h"
+
 
 /* USER CODE END 0 */
 /* Private function prototypes -----------------------------------------------*/
@@ -33,7 +35,6 @@
 void Error_Handler(void);
 
 /* USER CODE BEGIN 1 */
-struct udp_pcb *debug_if;
 /* USER CODE END 1 */
 
 /* Variables Initialization */
@@ -46,48 +47,21 @@ uint8_t NETMASK_ADDRESS[4];
 uint8_t GATEWAY_ADDRESS[4];
 
 /* USER CODE BEGIN 2 */
-uint8_t debugEnabled;
-uint8_t message[15]={'r','e','a','d','y'};
+
 
 
 /* USER CODE BEGIN 2 */
-/*
- * At the moment, extremely barebones udp callback function.
- * Checks that a pbuf structure is valid, and assigns the remote IP and port to the debug UDP port.
- * This is not strictly necessary as it could be added each pack, but we are assuming a single connection.
- * Reply with the same message to the client and enable the debug.
- */
-void handle_udp_recv(void *arg, struct udp_pcb *pcb, struct pbuf *p,  ip_addr_t *addr, u16_t port)
+//redirect printf to Uart;
+
+
+int __io_putchar(int ch)
 {
-    if (p != NULL) {
-        /* send received packet back to sender */
-        debug_if->remote_ip=(*addr);
-        debug_if->remote_port=port;
-        udp_send(pcb,p);
-        /* free the pbuf */
-        pbuf_free(p);
-        debugEnabled=0xFF;
-    }
+	  HAL_UART_Transmit(&huart3, (uint8_t *)&ch, 1, 0xFFFF);
+
+	  return ch;
 }
 
 
-
-/*
- * Create a new 10 byte pbuf structure for UDP in RAM.
- * We are only using a single transmit pbuf structure (no chains), so we explicitly make sure
- * 'next' does not point anywhere.
- * Set the payload to the first byte in the message array.
- * send the message on the debug_if interface.
- * free the pbuf structure.
- */
-void transmit()
-{
-	struct pbuf *debug_snd=pbuf_alloc(PBUF_TRANSPORT,10,PBUF_RAM);
-	debug_snd->next=NULL;
-	debug_snd->payload=(void*) &message[0];
-	udp_send(debug_if,debug_snd);
-	pbuf_free(debug_snd);
-}
 
 /* USER CODE END 2 */
 
@@ -123,16 +97,6 @@ void MX_LWIP_Init(void)
   }
 
 /* USER CODE BEGIN 3 */
-/* -Set debug enabled to false and instantiate a new udp protocol block.
- * -Bind this to the static ip Address set from cubeMX at port 1000.
- * -set the callback function to the handle_udp_recv function
- */
-  debugEnabled=0x00;
-  debug_if = udp_new();
-
-  udp_bind(debug_if,&ipaddr,1000);
-
-  udp_recv(debug_if,&handle_udp_recv,NULL);
 
 /* USER CODE END 3 */
 }
@@ -158,17 +122,11 @@ void MX_LWIP_Init(void)
 void MX_LWIP_Process(void)
 {
 /* USER CODE BEGIN 4_1 */
+
 /* USER CODE END 4_1 */
   ethernetif_input(&gnetif);
   
 /* USER CODE BEGIN 4_2 */
-
-
-  if(debugEnabled)
-  {
-	  //HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin,SET);
-	  transmit();
-  }
 
 /* USER CODE END 4_2 */  
   /* Handle timeouts */

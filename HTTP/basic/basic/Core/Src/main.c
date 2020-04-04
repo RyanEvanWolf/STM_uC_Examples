@@ -37,7 +37,6 @@
 #include "lwip.h"
 #include "tim.h"
 #include "usart.h"
-#include "usb_otg.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -105,7 +104,6 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USART3_UART_Init();
-  MX_USB_OTG_FS_PCD_Init();
   MX_LWIP_Init();
   MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
@@ -117,10 +115,13 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  MX_LWIP_Process();
+	  //MX_LWIP_Process();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+	  LWIP_DEBUGF(LWIP_DBG_TRACE,("DEBUGLOOP\n"));
+	  HAL_GPIO_TogglePin(uC_DEBUG_LED_GPIO_Port,uC_DEBUG_LED_Pin);
+	  HAL_Delay(1500);
   }
   /* USER CODE END 3 */
 }

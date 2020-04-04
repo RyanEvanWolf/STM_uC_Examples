@@ -1,3 +1,4 @@
+mqtt.c:153:1:mqtt_msg_type_to_str	16	static
 mqtt.c:170:1:msg_generate_packet_id	16	static
 mqtt.c:184:1:mqtt_ringbuf_put	16	static
 mqtt.c:195:1:mqtt_ringbuf_get_ptr	16	static

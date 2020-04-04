@@ -30,7 +30,7 @@
 
 /* Within 'USER CODE' section, code will be kept by default at each generation */
 /* USER CODE BEGIN 0 */
-
+#define LWIP_DEBUG 1
 /* USER CODE END 0 */
 
 #ifdef __cplusplus
@@ -65,12 +65,16 @@
 #define TCP_SNDQUEUELOWAT 5
 /*----- Value in opt.h for TCP_WND_UPDATE_THRESHOLD: LWIP_MIN(TCP_WND/4, TCP_MSS*4) -----*/
 #define TCP_WND_UPDATE_THRESHOLD 536
+/*----- Default Value for LWIP_NETIF_STATUS_CALLBACK: 0 ---*/
+#define LWIP_NETIF_STATUS_CALLBACK 1
 /*----- Value in opt.h for LWIP_NETCONN: 1 -----*/
 #define LWIP_NETCONN 0
 /*----- Value in opt.h for LWIP_SOCKET: 1 -----*/
 #define LWIP_SOCKET 0
 /*----- Value in opt.h for RECV_BUFSIZE_DEFAULT: INT_MAX -----*/
 #define RECV_BUFSIZE_DEFAULT 2000000000
+/*----- Default Value for LWIP_DISABLE_TCP_SANITY_CHECKS: 0 ---*/
+#define LWIP_DISABLE_TCP_SANITY_CHECKS 1
 /*----- Value in opt.h for LWIP_STATS: 1 -----*/
 #define LWIP_STATS 0
 /*----- Value in opt.h for CHECKSUM_GEN_IP: 1 -----*/
@@ -93,13 +97,16 @@
 #define CHECKSUM_CHECK_ICMP 0
 /*----- Value in opt.h for CHECKSUM_CHECK_ICMP6: 1 -----*/
 #define CHECKSUM_CHECK_ICMP6 0
+/*----- Default Value for LWIP_DBG_TYPES_ON: LWIP_DBG_ON ---*/
+#define LWIP_DBG_TYPES_ON LWIP_DBG_OFF
 /*----- Default Value for ETHARP_DEBUG: LWIP_DBG_OFF ---*/
 #define ETHARP_DEBUG LWIP_DBG_ON
 /*----- Default Value for NETIF_DEBUG: LWIP_DBG_OFF ---*/
 #define NETIF_DEBUG LWIP_DBG_ON
+/*----- Default Value for RAW_DEBUG: LWIP_DBG_OFF ---*/
+#define RAW_DEBUG LWIP_DBG_ON
 /*-----------------------------------------------------------------------------*/
 /* USER CODE BEGIN 1 */
-
 
 /* USER CODE END 1 */
 

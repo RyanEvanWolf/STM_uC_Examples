@@ -15,6 +15,7 @@ netif.c:822:1:netif_set_default	16	static
 netif.c:844:1:netif_set_up	16	static
 netif.c:875:1:netif_issue_reports	16	static
 netif.c:919:1:netif_set_down	16	static
+netif.c:957:1:netif_set_status_callback	16	static
 netif.c:988:1:netif_set_link_up	16	static
 netif.c:1026:1:netif_set_link_down	16	static
 netif.c:1619:1:netif_null_output_ip4	24	static
