@@ -1,0 +1,3 @@
+lwip.c:52:5:__io_putchar	16	static
+lwip.c:63:6:MX_LWIP_Init	24	static
+lwip.c:116:6:MX_LWIP_Process	8	static
